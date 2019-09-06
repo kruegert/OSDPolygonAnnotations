@@ -10,21 +10,6 @@ viewer = OpenSeadragon({
         tileSources: "/Annotations/data/tiles/channel_00.dzi",
 });
 
-// Assuming we have an OpenSeadragon Viewer called "viewer", we can catch the clicks
-// with addHandler like so:
-viewer.addHandler('canvas-click', function(event) {
-    // The canvas-click event gives us a position in web coordinates.
-    var webPoint = event.position;
-
-    // Convert that to viewport coordinates, the lingua franca of OpenSeadragon coordinates.
-    var viewportPoint = viewer.viewport.pointFromPixel(webPoint);
-
-    // Convert from viewport coordinates to image coordinates.
-    var imagePoint = viewer.viewport.viewportToImageCoordinates(viewportPoint);
-
-    // Show the results.
-    console.log(webPoint.toString(), viewportPoint.toString(), imagePoint.toString());
-});
 
 //we also add an svg overlay (plugin) for the fancy stuff
 svg_overlay = viewer.svgOverlay()
