@@ -2,7 +2,7 @@
 
 This is an example of polygon annotations as overlays on an openseadragon image viewer. Polygons are defined as an array of x and y coordinates. For each annotation, the user can define a description that is shown aside of the polygon annotation (active/deactivate description by clicking on the polygons)
 
-## Configuration/Run:
+## Configuration/Run
 1) Configure the path to your deepzoom image pyramid index (.dzi file) in index.js
 2) Open index.html in browser.
 3) edit polygons and text annoations in index.js as needed
@@ -20,9 +20,7 @@ var p1 = addPolygon(polygon1,'polygon1', 'add annotation text here', 0.55,0.04, 
 
 The polygons show up on the map thereafter. Click on the polygon to toggle the appearence of the text description.
 
-## Dependencies:
-- d3.js
+## Dependencies
+- d3.js stuff
 - openseadragon.js (openseadragon)
 - openseadragion-svg-overlay.js (seadragon svg overlay plugin)
--lz-string.js (compression/encoding/decoding library)
-- encrypt.js (some other encryption lib, currently not used)
